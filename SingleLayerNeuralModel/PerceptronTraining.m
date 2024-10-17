@@ -11,8 +11,8 @@ c2 = -1;                   % Expected output for Failed
 % Start of the training loop
 for i = 1:100
     % Calculate net value and output for input x1
-    net1 = (w * x1') + Q;  % Net value
-    g1 = 1 * (net1 >= 0) + -1 * (net1 < 0); % Actual output
+    net1 = (w * x1') + Q;                                       % Net value
+    g1 = 1 * (net1 >= 0) + -1 * (net1 < 0);         % Actual output
     
     % Calculate error and update weights and threshold for x1
     e1 = c1 - g1;                    % Calculate error
