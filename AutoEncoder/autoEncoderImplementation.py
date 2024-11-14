@@ -62,7 +62,7 @@ criterion = nn.MSELoss()
 # specify loss function
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 # number of epochs to train the model
-n_epochs = 1
+n_epochs = 20
 
 for epoch in range(1, n_epochs+1):
    # monitor training loss
@@ -108,7 +108,7 @@ for images, row in zip([images.numpy(), output], axes):
         ax.get_xaxis().set_visible(False)
         ax.get_yaxis().set_visible(False)
 
-# Wait for a key press and close the display windows
-#cv2.waitKey(0)
-#cv2.destroyAllWindows()
+# Show the inputs and outputs
+plt.show()
+
 
